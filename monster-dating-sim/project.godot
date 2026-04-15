@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Monster Dating Sim"
+run/main_scene="uid://dkj1xh1lhqswt"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[internationalization]
+
+locale/language_filter=["de", "en"]
+locale/country_filter=["DE", "GB"]
+locale/locale_filter_mode=1
 
 [physics]
 

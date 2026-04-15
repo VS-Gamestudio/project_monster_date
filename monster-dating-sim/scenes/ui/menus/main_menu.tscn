@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dkj1xh1lhqswt"]
+
+[ext_resource type="Script" uid="uid://cya2ems1ty3ln" path="res://scripts/ui/quit_game.gd" id="1_flhq8"]
+[ext_resource type="Texture2D" uid="uid://bfykksgexo2by" path="res://assets/images/placeholder-logo.png" id="1_h1kbi"]
+
+[sub_resource type="Theme" id="Theme_i77qe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lf53o"]
+line_spacing = 2.0
+font_size = 12
+
+[node name="MainMenu" type="Control" unique_id=1920815505]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1713884158]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2015144303]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1116812341]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="TitleLogo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=589274828]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_h1kbi")
+
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1634633770]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+
+[node name="Continue" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=1346073621]
+layout_mode = 2
+theme = SubResource("Theme_i77qe")
+text = "Continue"
+language = "en"
+
+[node name="NewGame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=475274326]
+layout_mode = 2
+theme = SubResource("Theme_i77qe")
+text = "New Game"
+language = "en"
+
+[node name="Options" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=360562207]
+layout_mode = 2
+theme = SubResource("Theme_i77qe")
+text = "Options"
+language = "en"
+
+[node name="Credits" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=61626247]
+layout_mode = 2
+theme = SubResource("Theme_i77qe")
+text = "Credits
+"
+language = "en"
+
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=475127235]
+layout_mode = 2
+theme = SubResource("Theme_i77qe")
+text = "Quit
+"
+language = "en"
+script = ExtResource("1_flhq8")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=180537996]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "version 0.0.1
+VS-Gamestudio"
+label_settings = SubResource("LabelSettings_lf53o")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer" unique_id=97076036]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1882269116]
