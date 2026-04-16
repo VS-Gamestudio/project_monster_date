@@ -1,6 +1,6 @@
 extends Button
 
-const MAIN_SCENE = preload("uid://dkj1xh1lhqswt")
+const TARGET_SCENE = ("res://scenes/ui/menus/main_menu.tscn") #packedScene didn't work here
 
 func _on_pressed():
-		get_tree().change_scene_to_packed(MAIN_SCENE)
+	get_tree().change_scene_to_file(TARGET_SCENE)

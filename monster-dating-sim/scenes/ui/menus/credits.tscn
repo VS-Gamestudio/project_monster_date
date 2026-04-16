@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://d05aukrpejxee"]
+
+[ext_resource type="Script" uid="uid://by7ka8ukpcdt" path="res://scripts/ui/menus/buttons/back_to_menu.gd" id="1_3ikd0"]
+
+[node name="Credits" type="Control" unique_id=1866539000]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TempBG2" type="ColorRect" parent="." unique_id=2042059739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.33333334, 0.30588236, 0.5019608, 1)
+
+[node name="Button" type="Button" parent="." unique_id=2045842032]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -15.5
+offset_right = 79.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_focus_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
+theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "Back to main menu"
+script = ExtResource("1_3ikd0")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
