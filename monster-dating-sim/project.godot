@@ -13,7 +13,22 @@ config_version=5
 config/name="Monster Dating Sim"
 run/main_scene="uid://dkj1xh1lhqswt"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/images/icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[file_customization]
+
+folder_colors={
+"res://add-ons/": "gray",
+"res://assets/": "pink",
+"res://assets/audio/": "purple",
+"res://scenes/": "orange",
+"res://scripts/": "blue"
+}
 
 [internationalization]
 

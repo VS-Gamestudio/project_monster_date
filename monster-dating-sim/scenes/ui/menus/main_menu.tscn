@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dkj1xh1lhqswt"]
 
-[ext_resource type="Script" uid="uid://cya2ems1ty3ln" path="res://scripts/ui/quit_game.gd" id="1_flhq8"]
+[ext_resource type="Script" uid="uid://cya2ems1ty3ln" path="res://scripts/ui/menus/buttons/quit_game.gd" id="1_flhq8"]
 [ext_resource type="Texture2D" uid="uid://bfykksgexo2by" path="res://assets/images/placeholder-logo.png" id="1_h1kbi"]
-
-[sub_resource type="Theme" id="Theme_i77qe"]
+[ext_resource type="Script" uid="uid://c5ta7jpipq4xa" path="res://scripts/ui/menus/buttons/continue_game.gd" id="2_ct055"]
+[ext_resource type="PackedScene" uid="uid://okjvu4inp5l" path="res://scenes/world/saved_scene.tscn" id="3_oj1oe"]
+[ext_resource type="Script" uid="uid://dt3n2l08xu3gm" path="res://scripts/ui/menus/buttons/new_game.gd" id="3_p0q51"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lf53o"]
 line_spacing = 2.0
@@ -16,6 +17,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="." unique_id=755816194]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TempBG" type="ColorRect" parent="Background" unique_id=240916249]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.33333334, 0.30588236, 0.5019608, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1713884158]
 layout_mode = 1
@@ -34,49 +54,92 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1116812341]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 3
 
 [node name="TitleLogo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=589274828]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture = ExtResource("1_h1kbi")
-
-[node name="Buttons" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1634633770]
+clip_contents = true
+custom_minimum_size = Vector2(800, 400)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
+texture = ExtResource("1_h1kbi")
+
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1634633770]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+theme_override_constants/separation = 8
 
 [node name="Continue" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=1346073621]
 layout_mode = 2
-theme = SubResource("Theme_i77qe")
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
+disabled = true
 text = "Continue"
+alignment = 0
 language = "en"
+script = ExtResource("2_ct055")
+safed_scene = ExtResource("3_oj1oe")
 
 [node name="NewGame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=475274326]
 layout_mode = 2
-theme = SubResource("Theme_i77qe")
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
 text = "New Game"
+alignment = 0
 language = "en"
+script = ExtResource("3_p0q51")
 
 [node name="Options" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=360562207]
 layout_mode = 2
-theme = SubResource("Theme_i77qe")
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
 text = "Options"
+alignment = 0
 language = "en"
 
 [node name="Credits" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=61626247]
 layout_mode = 2
-theme = SubResource("Theme_i77qe")
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
 text = "Credits
 "
+alignment = 0
 language = "en"
 
 [node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Buttons" unique_id=475127235]
 layout_mode = 2
-theme = SubResource("Theme_i77qe")
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
+theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
 text = "Quit
 "
+alignment = 0
 language = "en"
 script = ExtResource("1_flhq8")
 
@@ -93,3 +156,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1882269116]
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Buttons/Continue" to="MarginContainer/HBoxContainer/VBoxContainer/Buttons/Continue" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Buttons/NewGame" to="MarginContainer/HBoxContainer/VBoxContainer/Buttons/NewGame" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Buttons/Quit" to="MarginContainer/HBoxContainer/VBoxContainer/Buttons/Quit" method="_on_pressed"]
