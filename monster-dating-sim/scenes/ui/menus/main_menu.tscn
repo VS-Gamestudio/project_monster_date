@@ -48,6 +48,7 @@ theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 80
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2015144303]
 layout_mode = 2
@@ -57,12 +58,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="TitleLogo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=589274828]
-clip_contents = true
-custom_minimum_size = Vector2(800, 400)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
+size_flags_vertical = 3
 texture = ExtResource("1_h1kbi")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Buttons" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1634633770]
 custom_minimum_size = Vector2(250, 250)
@@ -79,7 +79,7 @@ theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
 theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Continue"
 alignment = 0
@@ -95,7 +95,7 @@ theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
 theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
 text = "New Game"
 alignment = 0
 language = "en"
@@ -109,7 +109,7 @@ theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
 theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
 text = "Options"
 alignment = 0
 language = "en"
@@ -122,7 +122,7 @@ theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
 theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
 text = "Credits
 "
 alignment = 0
@@ -136,7 +136,7 @@ theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.803321, 0.69516784, 0.25298104, 1)
 theme_override_colors/font_outline_color = Color(0.029506557, 0.029506557, 0.029506572, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 32
 text = "Quit
 "
 alignment = 0
