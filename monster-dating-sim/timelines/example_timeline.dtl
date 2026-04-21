@@ -1,2 +1,19 @@
-sdf #id:11
-asdf #id:12
+[style]
+We have set a style for the dialogue above, this is only important if we will have multiple different types of dialogue #id:13
+We can let characters join and leave the conversation via the command below, these can also be used for the texts, when using proper styles and having a character #id:14
+join  center
+hello I am example text #id:11
+if :
+	This only happens if the statement is true #id:15
+	Here we jump to the end of the timeline #id:16
+	jump end
+	this will never happen, because we jumped somewhere else before this #id:17
+else:
+	This only happens when the statement is false #id:18
+	here we set a variable #id:19
+	set 
+	\if you want to communicate something to the code, you use a signal, tell the developers what signal you sent and why #id:1a
+	[signal arg="example_signal"]
+label end #id:1b
+This is the end of the timeline, it is a good idea to always have a label at the end where you can jump to when you need to end the dialogue #id:1c
+[end_timeline]

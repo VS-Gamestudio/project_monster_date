@@ -1,3 +1,12 @@
 keys,en,de
-Text/11/text,sdf,hallo
-Text/12/text,asdf,das ist ein deutscher text
+Text/13/text,"We have set a style for the dialogue above, this is only important if we will have multiple different types of dialogue",
+Text/14/text,"We can let characters join and leave the conversation via the command below, these can also be used for the texts, when using proper styles and having a character",
+Text/11/text,hello I am example text,hallo
+Text/15/text,This only happens if the statement is true,
+Text/16/text,Here we jump to the end of the timeline ,
+Text/17/text,"this will never happen, because we jumped somewhere else before this",
+Text/18/text,This only happens when the statement is false,
+Text/19/text,here we set a variable,
+Text/1a/text,"if you want to communicate something to the code, you use a signal, tell the developers what signal you sent and why",
+Label/1b/display_name,,
+Text/1c/text,"This is the end of the timeline, it is a good idea to always have a label at the end where you can jump to when you need to end the dialogue",
