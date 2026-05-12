@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cdx5bva4xcuv2"]
+
+[node name="Node" type="Node" unique_id=891668081]
+
+[node name="Node" type="Node" parent="." unique_id=1293731023]
+
+[node name="Node" type="Node" parent="Node" unique_id=1544286386]
+
+[node name="Node" type="Node" parent="Node/Node" unique_id=2109877994]
+
+[node name="Node" type="Node" parent="Node/Node/Node" unique_id=1060658726]
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node" unique_id=1678161265]
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node/Node" unique_id=261383771]
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node/Node/Node" unique_id=1583021253]
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node/Node/Node/Node" unique_id=1199912249]
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node/Node/Node/Node/Node" unique_id=1092803629]
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node/Node/Node/Node/Node/Node" unique_id=1641873296]
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node/Node/Node/Node/Node/Node/Node" unique_id=110871178]
